@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff7fa;
+            color: #493743;
+        }
+
+        header {
+            background: #f3c6d8;
+            padding: 22px 8%;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #793d59;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #704e60;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 28px;
+            color: #793d59;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(100, 50, 75, 0.10);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: #f8e5ed;
+        }
+
+        .product-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-info h3 {
+            margin-bottom: 10px;
+            color: #60364d;
+        }
+
+        .price {
+            color: #bd527f;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .add-button {
+            background: #d979a0;
+            color: white;
+            border: none;
+            padding: 11px 20px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .add-button:hover {
+            background: #b9547f;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #765c6b;
+        }
+
+        @media (max-width: 750px) {
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Blush Boutique</h1>
+        <p>Discover your everyday favourites ✨</p>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title">Our Products</h2>
+
+        <div class="products">
+
+            <div class="product-card">
+                <img class="product-image"
+                     src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600"
+                     alt="Stylish handbag">
+                <div class="product-info">
+                    <h3>Classic Handbag</h3>
+                    <p class="price">₹1,299</p>
+                    <button class="add-button"
+                            onclick="addToCart('Classic Handbag')">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-image"
+                     src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=600"
+                     alt="Perfume bottle">
+                <div class="product-info">
+                    <h3>Elegant Perfume</h3>
+                    <p class="price">₹899</p>
+                    <button class="add-button"
+                            onclick="addToCart('Elegant Perfume')">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-image"
+                     src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600"
+                     alt="Jewellery">
+                <div class="product-info">
+                    <h3>Pretty Jewellery</h3>
+                    <p class="price">₹599</p>
+                    <button class="add-button"
+                            onclick="addToCart('Pretty Jewellery')">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        © 2026 Blush Boutique | Made with love ♡
+    </footer>
+
+    <script>
+        function addToCart(productName) {
+            alert(productName + " added to cart!");
+        }
+    </script>
+
+</body>
+</html>
